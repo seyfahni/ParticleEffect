@@ -15,7 +15,7 @@ Documentation here: http://ci.sinndevelopment.com/job/ParticleEffect%20Library/j
         <dependency>
             <groupId>com.darkblade12</groupId>
             <artifactId>particleeffect</artifactId>
-            <version>1.7</version>
+            <version>1.7.0-SNAPSHOT</version>
         </dependency>
         
         <plugin>
