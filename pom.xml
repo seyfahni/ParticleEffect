@@ -22,23 +22,23 @@
     <dependencies>
         <!--Bukkit/Spigot API-->
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.11-R0.1-SNAPSHOT</version>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.11.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
     
     <distributionManagement>
         <repository>
-            <id>sinndev-repo</id>
+            <id>de.seyfahni.release</id>
             <name>Releases</name>
-            <url>http://repo.sinndev.com/content/repositories/releases/</url>
+            <url>https://maven.seyfahni.de/repository/internal/</url>
         </repository>
         <snapshotRepository>
-            <id>sinndev-repo</id>
+            <id>de.seyfahni.snapshot</id>
             <name>Snapshots</name>
-            <url>http://repo.sinndev.com/content/repositories/snapshots/</url>
+            <url>https://maven.seyfahni.de/repository/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
     
