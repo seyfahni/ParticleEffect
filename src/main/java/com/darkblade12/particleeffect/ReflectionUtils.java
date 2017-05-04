@@ -10,17 +10,17 @@ import java.util.Map;
 import org.bukkit.Bukkit;
 
 /**
- * <b>ReflectionUtils</b>
+ * <b>ReflectionUtils</b>.
  * <p>
- * This class provides useful methods which makes dealing with reflection much easier, especially when working with Bukkit
+ * This class provides useful methods which makes dealing with reflection much easier, especially when working with Bukkit.
  * <p>
  * You are welcome to use it, modify it and redistribute it under the following conditions:
  * <ul>
- * <li>Don't claim this class as your own
- * <li>Don't remove this disclaimer
+ * <li>Don't claim this class as your own!
+ * <li>Don't remove this disclaimer!
  * </ul>
  * <p>
- * <i>It would be nice if you provide credit to me if you use this class in a published project</i>
+ * <i>It would be nice if you provide credit to me if you use this class in a published project.</i>
  * 
  * @author DarkBlade12
  * @version 1.1
@@ -30,7 +30,7 @@ public final class ReflectionUtils {
 	private ReflectionUtils() {}
 
 	/**
-	 * Returns the constructor of a given class with the given parameter types
+	 * Returns the constructor of a given class with the given parameter types.
 	 * 
 	 * @param clazz Target class
 	 * @param parameterTypes Parameter types of the desired constructor
@@ -52,7 +52,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns the constructor of a desired class with the given parameter types
+	 * Returns the constructor of a desired class with the given parameter types.
 	 * 
 	 * @param className Name of the desired target class
 	 * @param packageType Package where the desired target class is located
@@ -60,7 +60,6 @@ public final class ReflectionUtils {
 	 * @return The constructor of the desired target class with the specified parameter types
 	 * @throws NoSuchMethodException If the desired constructor with the specified parameter types cannot be found
 	 * @throws ClassNotFoundException ClassNotFoundException If the desired target class with the specified name and package cannot be found
-	 * @see #getClass(String, PackageType)
 	 * @see #getConstructor(Class, Class...)
 	 */
 	public static Constructor<?> getConstructor(String className, PackageType packageType, Class<?>... parameterTypes) throws NoSuchMethodException, ClassNotFoundException {
@@ -68,7 +67,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns an instance of a class with the given arguments
+	 * Returns an instance of a class with the given arguments.
 	 * 
 	 * @param clazz Target class
 	 * @param arguments Arguments which are used to construct an object of the target class
@@ -84,7 +83,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns an instance of a desired class with the given arguments
+	 * Returns an instance of a desired class with the given arguments.
 	 * 
 	 * @param className Name of the desired target class
 	 * @param packageType Package where the desired target class is located
@@ -96,7 +95,6 @@ public final class ReflectionUtils {
 	 * @throws InvocationTargetException If the desired constructor cannot be invoked
 	 * @throws NoSuchMethodException If the desired constructor with the specified arguments cannot be found
 	 * @throws ClassNotFoundException If the desired target class with the specified name and package cannot be found
-	 * @see #getClass(String, PackageType)
 	 * @see #instantiateObject(Class, Object...)
 	 */
 	public static Object instantiateObject(String className, PackageType packageType, Object... arguments) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException {
@@ -104,7 +102,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns a method of a class with the given parameter types
+	 * Returns a method of a class with the given parameter types.
 	 * 
 	 * @param clazz Target class
 	 * @param methodName Name of the desired method
@@ -126,7 +124,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns a method of a desired class with the given parameter types
+	 * Returns a method of a desired class with the given parameter types.
 	 * 
 	 * @param className Name of the desired target class
 	 * @param packageType Package where the desired target class is located
@@ -135,7 +133,6 @@ public final class ReflectionUtils {
 	 * @return The method of the desired target class with the specified name and parameter types
 	 * @throws NoSuchMethodException If the desired method of the desired target class with the specified name and parameter types cannot be found
 	 * @throws ClassNotFoundException If the desired target class with the specified name and package cannot be found
-	 * @see #getClass(String, PackageType)
 	 * @see #getMethod(Class, String, Class...)
 	 */
 	public static Method getMethod(String className, PackageType packageType, String methodName, Class<?>... parameterTypes) throws NoSuchMethodException, ClassNotFoundException {
@@ -143,7 +140,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Invokes a method on an object with the given arguments
+	 * Invokes a method on an object with the given arguments.
 	 * 
 	 * @param instance Target object
 	 * @param methodName Name of the desired method
@@ -161,7 +158,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Invokes a method of the target class on an object with the given arguments
+	 * Invokes a method of the target class on an object with the given arguments.
 	 * 
 	 * @param instance Target object
 	 * @param clazz Target class
@@ -180,7 +177,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Invokes a method of a desired class on an object with the given arguments
+	 * Invokes a method of a desired class on an object with the given arguments.
 	 * 
 	 * @param instance Target object
 	 * @param className Name of the desired target class
@@ -193,7 +190,6 @@ public final class ReflectionUtils {
 	 * @throws InvocationTargetException If the desired method cannot be invoked on the target object
 	 * @throws NoSuchMethodException If the desired method of the desired target class with the specified name and arguments cannot be found
 	 * @throws ClassNotFoundException If the desired target class with the specified name and package cannot be found
-	 * @see #getClass(String, PackageType)
 	 * @see #invokeMethod(Object, Class, String, Object...)
 	 */
 	public static Object invokeMethod(Object instance, String className, PackageType packageType, String methodName, Object... arguments) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException {
@@ -201,7 +197,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns a field of the target class with the given name
+	 * Returns a field of the target class with the given name.
 	 * 
 	 * @param clazz Target class
 	 * @param declared Whether the desired field is declared or not
@@ -217,7 +213,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns a field of a desired class with the given name
+	 * Returns a field of a desired class with the given name.
 	 * 
 	 * @param className Name of the desired target class
 	 * @param packageType Package where the desired target class is located
@@ -234,7 +230,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns the value of a field of the given class of an object
+	 * Returns the value of a field of the given class of an object.
 	 * 
 	 * @param instance Target object
 	 * @param clazz Target class
@@ -252,7 +248,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns the value of a field of a desired class of an object
+	 * Returns the value of a field of a desired class of an object.
 	 * 
 	 * @param instance Target object
 	 * @param className Name of the desired target class
@@ -272,7 +268,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Returns the value of a field with the given name of an object
+	 * Returns the value of a field with the given name of an object.
 	 * 
 	 * @param instance Target object
 	 * @param declared Whether the desired field is declared or not
@@ -289,7 +285,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Sets the value of a field of the given class of an object
+	 * Sets the value of a field of the given class of an object.
 	 * 
 	 * @param instance Target object
 	 * @param clazz Target class
@@ -307,7 +303,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Sets the value of a field of a desired class of an object
+	 * Sets the value of a field of a desired class of an object.
 	 * 
 	 * @param instance Target object
 	 * @param className Name of the desired target class
@@ -327,7 +323,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Sets the value of a field with the given name of an object
+	 * Sets the value of a field with the given name of an object.
 	 * 
 	 * @param instance Target object
 	 * @param declared Whether the desired field is declared or not
@@ -344,7 +340,7 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Represents an enumeration of dynamic packages of NMS and CraftBukkit
+	 * Represents an enumeration of dynamic packages of NMS and CraftBukkit.
 	 * <p>
 	 * This class is part of the <b>ReflectionUtils</b> and follows the same usage conditions
 	 * 
@@ -352,31 +348,129 @@ public final class ReflectionUtils {
 	 * @since 1.0
 	 */
 	public enum PackageType {
+
+		/**
+		 * The NMS package prefix.
+		 */
 		MINECRAFT_SERVER("net.minecraft.server." + getServerVersion()),
+
+		/**
+		 * The craftbukkit package prefix.
+		 */
 		CRAFTBUKKIT("org.bukkit.craftbukkit." + getServerVersion()),
+
+		/**
+		 * The block subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_BLOCK(CRAFTBUKKIT, "block"),
+
+		/**
+		 * The chunkio subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_CHUNKIO(CRAFTBUKKIT, "chunkio"),
+
+		/**
+		 * The command subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_COMMAND(CRAFTBUKKIT, "command"),
+
+		/**
+		 * The conversations subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_CONVERSATIONS(CRAFTBUKKIT, "conversations"),
+
+		/**
+		 * The enchantments subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_ENCHANTMENS(CRAFTBUKKIT, "enchantments"),
+
+		/**
+		 * The entity subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_ENTITY(CRAFTBUKKIT, "entity"),
+
+		/**
+		 * The event subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_EVENT(CRAFTBUKKIT, "event"),
+
+		/**
+		 * The generator subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_GENERATOR(CRAFTBUKKIT, "generator"),
+
+		/**
+		 * The help subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_HELP(CRAFTBUKKIT, "help"),
+
+		/**
+		 * The inventory subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_INVENTORY(CRAFTBUKKIT, "inventory"),
+
+		/**
+		 * The map subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_MAP(CRAFTBUKKIT, "map"),
+
+		/**
+		 * The metadata subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_METADATA(CRAFTBUKKIT, "metadata"),
+
+		/**
+		 * The potion subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_POTION(CRAFTBUKKIT, "potion"),
+
+		/**
+		 * The projectiles subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_PROJECTILES(CRAFTBUKKIT, "projectiles"),
+
+		/**
+		 * The scheduler subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_SCHEDULER(CRAFTBUKKIT, "scheduler"),
+
+		/**
+		 * The scoreboard subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_SCOREBOARD(CRAFTBUKKIT, "scoreboard"),
+
+		/**
+		 * The updater subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_UPDATER(CRAFTBUKKIT, "updater"),
+
+		/**
+		 * The util subpackage of craftbukkit.
+		 * Use it in conjunction with the craftbukkit prefix.
+		 */
 		CRAFTBUKKIT_UTIL(CRAFTBUKKIT, "util");
 
 		private final String path;
 
 		/**
-		 * Construct a new package type
+		 * Construct a new package type.
 		 * 
 		 * @param path Path of the package
 		 */
@@ -385,7 +479,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Construct a new package type
+		 * Construct a new package type.
 		 * 
 		 * @param parent Parent package of the package
 		 * @param path Path of the package
@@ -395,7 +489,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the path of this package type
+		 * Returns the path of this package type.
 		 * 
 		 * @return The path
 		 */
@@ -404,7 +498,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the class with the given name
+		 * Returns the class with the given name.
 		 * 
 		 * @param className Name of the desired class
 		 * @return The class with the specified name
@@ -421,9 +515,9 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the version of your server
+		 * Returns the version of your server.
 		 * 
-		 * @return The server version
+		 * @return the server version
 		 */
 		public static String getServerVersion() {
 			return Bukkit.getServer().getClass().getPackage().getName().substring(23);
@@ -431,37 +525,69 @@ public final class ReflectionUtils {
 	}
 
 	/**
-	 * Represents an enumeration of Java data types with corresponding classes
+	 * Represents an enumeration of Java data types with corresponding classes.
 	 * <p>
-	 * This class is part of the <b>ReflectionUtils</b> and follows the same usage conditions
+	 * This class is part of the <b>ReflectionUtils</b> and follows the same usage conditions.
 	 * 
 	 * @author DarkBlade12
 	 * @since 1.0
 	 */
 	public enum DataType {
+
+		/**
+		 * The Java native byte type.
+		 */
 		BYTE(byte.class, Byte.class),
+
+		/**
+		 * The Java native short type.
+		 */
 		SHORT(short.class, Short.class),
+
+		/**
+		 * The Java native int type.
+		 */
 		INTEGER(int.class, Integer.class),
+
+		/**
+		 * The Java native long type.
+		 */
 		LONG(long.class, Long.class),
+
+		/**
+		 * The Java native char type.
+		 */
 		CHARACTER(char.class, Character.class),
+
+		/**
+		 * The Java native float type.
+		 */
 		FLOAT(float.class, Float.class),
+
+		/**
+		 * The Java native double type.
+		 */
 		DOUBLE(double.class, Double.class),
+
+		/**
+		 * The Java native boolean type.
+		 */
 		BOOLEAN(boolean.class, Boolean.class);
 
-		private static final Map<Class<?>, DataType> CLASS_MAP = new HashMap<Class<?>, DataType>();
+		private static final Map<Class<?>, DataType> CLASS_MAP = new HashMap<>();
 		private final Class<?> primitive;
 		private final Class<?> reference;
 
 		// Initialize map for quick class lookup
 		static {
 			for (DataType type : values()) {
-				CLASS_MAP.put(type.primitive, type);
-				CLASS_MAP.put(type.reference, type);
+				CLASS_MAP.put(type.getPrimitive(), type);
+				CLASS_MAP.put(type.getReference(), type);
 			}
 		}
 
 		/**
-		 * Construct a new data type
+		 * Construct a new data type.
 		 * 
 		 * @param primitive Primitive class of this data type
 		 * @param reference Reference class of this data type
@@ -472,7 +598,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the primitive class of this data type
+		 * Returns the primitive class of this data type.
 		 * 
 		 * @return The primitive class
 		 */
@@ -481,7 +607,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the reference class of this data type
+		 * Returns the reference class of this data type.
 		 * 
 		 * @return The reference class
 		 */
@@ -490,7 +616,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the data type with the given primitive/reference class
+		 * Returns the data type with the given primitive/reference class.
 		 * 
 		 * @param clazz Primitive/Reference class of the data type
 		 * @return The data type
@@ -500,7 +626,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the primitive class of the data type with the given reference class
+		 * Returns the primitive class of the data type with the given reference class.
 		 * 
 		 * @param clazz Reference class of the data type
 		 * @return The primitive class
@@ -511,7 +637,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the reference class of the data type with the given primitive class
+		 * Returns the reference class of the data type with the given primitive class.
 		 * 
 		 * @param clazz Primitive class of the data type
 		 * @return The reference class
@@ -522,7 +648,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the primitive class array of the given class array
+		 * Returns the primitive class array of the given class array.
 		 * 
 		 * @param classes Given class array
 		 * @return The primitive class array
@@ -537,7 +663,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the reference class array of the given class array
+		 * Returns the reference class array of the given class array.
 		 * 
 		 * @param classes Given class array
 		 * @return The reference class array
@@ -552,9 +678,9 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the primitive class array of the given object array
+		 * Returns the primitive class array of the given object array.
 		 * 
-		 * @param object Given object array
+		 * @param objects The object array
 		 * @return The primitive class array
 		 */
 		public static Class<?>[] getPrimitive(Object[] objects) {
@@ -567,9 +693,9 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Returns the reference class array of the given object array
+		 * Returns the reference class array of the given object array.
 		 * 
-		 * @param object Given object array
+		 * @param objects The object array
 		 * @return The reference class array
 		 */
 		public static Class<?>[] getReference(Object[] objects) {
@@ -582,7 +708,7 @@ public final class ReflectionUtils {
 		}
 
 		/**
-		 * Compares two class arrays on equivalence
+		 * Compares two class arrays on equivalence.
 		 * 
 		 * @param primary Primary class array
 		 * @param secondary Class array which is compared to the primary array
